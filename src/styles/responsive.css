@@ -49,8 +49,8 @@
     .list{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 16px;
-        grid-row-gap: 16px;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
     }
 }
 
@@ -58,8 +58,8 @@
     .list{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
     }
 }
 @media screen and (min-width: 1200px) {
