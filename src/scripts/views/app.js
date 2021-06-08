@@ -30,4 +30,5 @@ class App {
     await page.afterRender();
   }
 }
+
 export default App;

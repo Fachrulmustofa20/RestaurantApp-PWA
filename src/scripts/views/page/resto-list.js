@@ -1,5 +1,5 @@
 import RestoDBSource from '../../data/restodb-source';
-import restoListTemplate from '../templates/template-creator';
+import { restoListTemplate, spinner } from '../templates/template-creator';
 
 const restoList = {
   async render() {
@@ -7,20 +7,26 @@ const restoList = {
         <section class="content">
             <div class="latest">
                 <h1 class="latest-label"><span class="underline">Explore Restaurant</span></h1>
+                <div class="loader"></div>
                 <div id="list" class="list">
-                
                 </div>
             </div>
         </section>
         `;
   },
   async afterRender() {
-    const restaurant = await RestoDBSource.RestaurantList();
-
-    const restaurantContainer = document.querySelector('#list');
-    restaurant.forEach((resto) => {
-      restaurantContainer.innerHTML += restoListTemplate(resto);
-    });
+    try {
+      const restaurantContainer = document.querySelector('#list');
+      const preloader = document.querySelector('.loader');
+      preloader.innerHTML = spinner;
+      const restaurant = await RestoDBSource.RestaurantList();
+      restaurant.forEach((resto) => {
+        restaurantContainer.innerHTML += restoListTemplate(resto);
+      });
+      preloader.querySelector('.spinner').setAttribute('hidden', '');
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 

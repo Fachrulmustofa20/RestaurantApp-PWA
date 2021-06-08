@@ -5,7 +5,7 @@ import Favorite from '../views/page/favorite';
 const routes = {
   '/': RestoList,
   '/favorite': Favorite,
-  'detail/:id': Detail,
+  '/detail/:id': Detail,
 };
 
 export default routes;

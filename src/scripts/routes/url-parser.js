@@ -2,16 +2,16 @@
 const UrlParser = {
   parseActiveUrlWithCombiner() {
     const url = window.location.hash.slice(1).toLowerCase();
-    const splitedUrl = this._urlSpliter(url);
+    const splitedUrl = this._urlSplitter(url);
     return this._urlCombiner(splitedUrl);
   },
 
   parseActiveUrlWithoutCombiner() {
     const url = window.location.hash.slice(1).toLowerCase();
-    return this._urlSpliter(url);
+    return this._urlSplitter(url);
   },
 
-  _urlSpliter(url) {
+  _urlSplitter(url) {
     const urlsSplits = url.split('/');
     return {
       resource: urlsSplits[1] || null,
@@ -21,11 +21,9 @@ const UrlParser = {
   },
 
   _urlCombiner(splitedUrl) {
-    return (
-      (splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
-            + (splitedUrl.id ? '/:id' : '')
-            + (splitedUrl.verb ? `/${splitedUrl.verb}` : '')
-    );
+    return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
+      + (splitedUrl.id ? '/:id' : '')
+      + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
   },
 };
 

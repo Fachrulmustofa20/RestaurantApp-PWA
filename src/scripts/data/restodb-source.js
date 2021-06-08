@@ -10,7 +10,7 @@ class RestoDBSource {
   static async DetailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.RESTAURANT_DETAIL(id));
     const responseJson = await response.json();
-    return responseJson.restaurants;
+    return responseJson.restaurant;
   }
 }
 
