@@ -1,9 +1,11 @@
+import '../components/hero-element';
 import RestoDBSource from '../../data/restodb-source';
 import { restoListTemplate, spinner } from '../templates/template-creator';
 
 const restoList = {
   async render() {
     return `
+        <hero-element></hero-element>
         <section class="content">
             <div class="latest">
                 <h1 class="latest-label"><span class="underline">Explore Restaurant</span></h1>
@@ -15,10 +17,10 @@ const restoList = {
         `;
   },
   async afterRender() {
+    const restaurantContainer = document.querySelector('#list');
+    const preloader = document.querySelector('.loader');
+    preloader.innerHTML = spinner;
     try {
-      const restaurantContainer = document.querySelector('#list');
-      const preloader = document.querySelector('.loader');
-      preloader.innerHTML = spinner;
       const restaurant = await RestoDBSource.RestaurantList();
       restaurant.forEach((resto) => {
         restaurantContainer.innerHTML += restoListTemplate(resto);

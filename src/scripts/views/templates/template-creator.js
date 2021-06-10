@@ -16,15 +16,12 @@ const restoListTemplate = (resto) => `
     `;
 
 const restoDetailTemplate = (resto) => `
-    <h1 class="restaurant-name"><span class="underline">${resto.name}</span></h1>
     <img class="restaurant-image" src="${CONFIG.MEDIUM_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
     <div class="restaurant-info">
-        <h2 class="rating-info">Rating: ${resto.rating}</h2>
-        <h2>Informasi</h2>
-        <h3 class="description">Deskripsi</h3>
+        <h2 class="restaurant-name"><span class="underline">${resto.name}</span></h2>
+        <h3 class="rating-info">Rating: ${resto.rating}</h3>
         <p>${resto.description}</p>
-        <h3 class="address">Alamat Lengkap</h3>
-        <p>${resto.address}, ${resto.city}</p>
+        <p class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>${resto.address}, ${resto.city}</strong></p>
         <h3 class="category">Kategori Menu</h3>
         <p>${resto.categories.map((category) => category.name).join(', ')}</p>
         <h3 class="menu">Menu</h3>
@@ -33,14 +30,14 @@ const restoDetailTemplate = (resto) => `
         <h4 class="drink">Minuman</h4>
         <p>${resto.menus.drinks.map((drink) => drink.name).join(', ')}</p>
         <div class="customer-reviews">
-            <h4>Costumer Reviews</h4>
+            <h4>Customer Reviews</h4>
             ${resto.customerReviews.map((customer) => `
                     <div class="reviews">        
                         <h5 class="customer-name">${customer.name}</h5>
                         <p class="date">${customer.date}</p>
                         <p>${customer.review}</p>
                     </div>
-                `)}
+                `).join('')}
         </div>
     </div>
     `;
@@ -53,8 +50,23 @@ const spinner = `
   <div class="rect5"></div>
 </div>
 `;
+
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
 export {
   restoListTemplate,
   restoDetailTemplate,
   spinner,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };

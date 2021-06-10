@@ -58,11 +58,7 @@ a{
     font-weight: 400;
 }
 .nav-link:hover{
-    color: #ecf0f1;
-}
-.active{
     color: #f5d34b;
-    font-weight: 500;
 }
 .menu-toggle {
     display: none;
@@ -155,7 +151,7 @@ main{
  */
 .latest{
     width: 100%;
-    margin: 30px auto;
+    margin: 23px auto;
     text-align: center;
 }
 .latest-label{
@@ -172,10 +168,14 @@ main{
     margin: 16px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
-    border-radius: 3px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 .list-item-thumb{
     width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
 }
 .list-city{
     position: absolute;
@@ -309,14 +309,17 @@ footer p{
 */
 .restaurant-name{
     width: 100%;
-    margin: 30px auto;
+    margin: 10px auto;
     text-align: center;
 }
 .restaurant-image{
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
 }
 .restaurant-info{
-    padding: 25px;
+    padding: 5px 40px;
     text-align: justify;
 }
 .rating-info{
@@ -333,7 +336,7 @@ footer p{
 }
 .reviews{
     padding: 5px 10px;
-    margin: 10px 0;
+    margin: 18px 0;
     background-color: #e8e8eb;
     border-radius: 5px;
 }
@@ -341,4 +344,24 @@ footer p{
     color: rgb(67, 67, 67);
     font-size: 12px;
     margin: 3px 0;
+}
+
+/*
+ * Like
+ */
+ .like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #f5d34b;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
