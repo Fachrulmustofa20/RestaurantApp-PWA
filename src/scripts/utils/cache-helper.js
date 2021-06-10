@@ -2,9 +2,9 @@
 import CONFIG from '../globals/config';
 
 const CacheHelper = {
-  async cachingAppShell(requests) {
+  async cachingAppShell(request) {
     const cache = await this._openCache();
-    cache.addAll(requests);
+    cache.addAll(request);
   },
 
   async deleteOldCache() {
