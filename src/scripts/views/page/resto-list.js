@@ -1,6 +1,6 @@
 import '../../components/hero-element';
 import RestoDBSource from '../../data/restodb-source';
-import { restoListTemplate, spinner } from '../templates/template-creator';
+import { notConnection, restoListTemplate, spinner } from '../templates/template-creator';
 
 const restoList = {
   async render() {
@@ -27,7 +27,7 @@ const restoList = {
       });
       preloader.querySelector('.spinner').setAttribute('hidden', '');
     } catch (error) {
-      console.log(error);
+      preloader.innerHTML = notConnection;
     }
   },
 };

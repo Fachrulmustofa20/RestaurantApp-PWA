@@ -1,7 +1,7 @@
 import RestoDBSource from '../../data/restodb-source';
 import UrlParser from '../../routes/url-parser';
 import likeButtonInitiator from '../../utils/like-button-initiator';
-import { restoDetailTemplate, spinner } from '../templates/template-creator';
+import { notConnection, restoDetailTemplate, spinner } from '../templates/template-creator';
 
 const Detail = {
   async render() {
@@ -12,10 +12,10 @@ const Detail = {
   },
 
   async afterRender() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const restaurantContainer = document.querySelector('#restaurant');
+    restaurantContainer.innerHTML = spinner;
     try {
-      const url = UrlParser.parseActiveUrlWithoutCombiner();
-      const restaurantContainer = document.querySelector('#restaurant');
-      restaurantContainer.innerHTML = spinner;
       const restaurant = await RestoDBSource.DetailRestaurant(url.id);
       restaurantContainer.innerHTML += restoDetailTemplate(restaurant);
       restaurantContainer.querySelector('.spinner').setAttribute('hidden', '');
@@ -36,7 +36,7 @@ const Detail = {
         },
       });
     } catch (error) {
-      console.log(error);
+      restaurantContainer.innerHTML = notConnection;
     }
   },
 };

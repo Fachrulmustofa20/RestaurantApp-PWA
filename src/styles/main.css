@@ -158,7 +158,7 @@ main{
     color: #18191a;
 }
 .favorite-label{
-    padding-top: 30px;
+    padding-top: 25px;
 }
 .list{
     margin: 32px auto auto;
@@ -368,4 +368,21 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.not-connection{
+    text-align: center;
+    padding-top: 150px;
+    min-height: 540px;
+}
+.not-internet{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.img-internet{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
 }

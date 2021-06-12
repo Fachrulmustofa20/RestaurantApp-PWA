@@ -52,6 +52,20 @@ const spinner = `
 </div>
 `;
 
+const notConnection = `
+  <div class="not-connection">
+      <img src="./images/no-connection.png" class="img-internet">
+      <h3 class="not-internet">Uppss!..Anda sedang tidak terhubung dengan internet!</h3>
+  </div>
+`;
+
+const isEmpty = `
+  <div class="not-connection">
+    <img src="./images/is-empty.png" class="img-internet">
+    <h3 class="not-internet">Uppss!..Anda belum memiliki restaurant favorit!</h3>
+  </div>
+`;
+
 const createLikeButtonTemplate = () => `
   <button aria-label="like this movie" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -68,6 +82,8 @@ export {
   restoListTemplate,
   restoDetailTemplate,
   spinner,
+  notConnection,
+  isEmpty,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };
