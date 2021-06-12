@@ -60,9 +60,9 @@ const notConnection = `
 `;
 
 const isEmpty = `
-  <div class="not-connection">
-    <img src="./images/is-empty.png" class="img-internet">
-    <h3 class="not-internet">Uppss!..Anda belum memiliki restaurant favorit!</h3>
+  <div class="isEmpty">
+    <img src="./images/is-empty.png" class="img-null">
+    <h3 class="empty">Uppss!..Anda belum memiliki restaurant favorit!</h3>
   </div>
 `;
 

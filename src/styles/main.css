@@ -375,14 +375,19 @@ footer p{
     padding-top: 150px;
     min-height: 540px;
 }
-.not-internet{
+.not-internet, .empty{
     font-weight: bold;
     display: block;
     margin-top: 10px;
 }
-.img-internet{
+.img-internet, .img-null{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
+}
+.isEmpty{
+    text-align: center;
+    padding-top: 150px;
+    min-height: 700px;
 }
