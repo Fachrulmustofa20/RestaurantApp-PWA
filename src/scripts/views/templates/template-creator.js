@@ -22,15 +22,15 @@ const restoDetailTemplate = (resto) => `
         <h3 class="rating-info">Rating: ${resto.rating}</h3>
         <p>${resto.description}</p>
         <p class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <strong>${resto.address}, ${resto.city}</strong></p>
-        <h3 class="category">Kategori Menu</h3>
+        <h3 class="category"><span class="underline">Kategori Menu</span></h3>
         <p>${resto.categories.map((category) => category.name).join(', ')}</p>
         <h3 class="menu">Menu</h3>
-        <h4 class="food">Makanan</h4>
+        <h4 class="food"><span class="underline">Makanan</span></h4>
         <p>${resto.menus.foods.map((food) => food.name).join(', ')}</p>
-        <h4 class="drink">Minuman</h4>
+        <h4 class="drink"><span class="underline">Minuman</span></h4>
         <p>${resto.menus.drinks.map((drink) => drink.name).join(', ')}</p>
         <div class="customer-reviews">
-            <h4>Customer Reviews</h4>
+            <h4><span class="underline">Customer Reviews</span></h4>
             ${resto.customerReviews.map((customer) => `
                     <div class="reviews">        
                         <h5 class="customer-name">${customer.name}</h5>
