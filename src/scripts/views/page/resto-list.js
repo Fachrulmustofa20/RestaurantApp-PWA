@@ -1,4 +1,4 @@
-import '../components/hero-element';
+import '../../components/hero-element';
 import RestoDBSource from '../../data/restodb-source';
 import { restoListTemplate, spinner } from '../templates/template-creator';
 

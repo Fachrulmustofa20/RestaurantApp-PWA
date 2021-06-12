@@ -1,7 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import './views/components/footer-element';
+import './components/footer-element';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 

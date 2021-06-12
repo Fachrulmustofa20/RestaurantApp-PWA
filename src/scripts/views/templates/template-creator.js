@@ -41,6 +41,7 @@ const restoDetailTemplate = (resto) => `
         </div>
     </div>
     `;
+
 const spinner = `
 <div class="spinner">
   <div class="rect1"></div>

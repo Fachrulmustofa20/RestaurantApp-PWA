@@ -1,13 +1,13 @@
 import RestoDBSource from '../../data/restodb-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import likeButtonInitiator from '../../utils/like-button-initiator';
 import { restoDetailTemplate, spinner } from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
-            <div id="restaurant" class="restaurant">
-            <div id="likeButtonContainer">
+            <div id="restaurant" class="restaurant"></div>
+            <div id="likeButtonContainer"></div>
         `;
   },
 
@@ -19,9 +19,10 @@ const Detail = {
       const restaurant = await RestoDBSource.DetailRestaurant(url.id);
       restaurantContainer.innerHTML += restoDetailTemplate(restaurant);
       restaurantContainer.querySelector('.spinner').setAttribute('hidden', '');
-      LikeButtonInitiator.init({
+
+      likeButtonInitiator.Infinity({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
-        resto: {
+        restaurant: {
           id: restaurant.id,
           name: restaurant.name,
           description: restaurant.description,
