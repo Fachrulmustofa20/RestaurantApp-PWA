@@ -373,7 +373,7 @@ footer p{
 .not-connection{
     text-align: center;
     padding-top: 150px;
-    min-height: 540px;
+    min-height: 800px;
 }
 .not-internet, .empty{
     font-weight: bold;
