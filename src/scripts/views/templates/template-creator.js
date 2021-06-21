@@ -31,13 +31,15 @@ const restoDetailTemplate = (resto) => `
         <p>${resto.menus.drinks.map((drink) => drink.name).join(', ')}</p>
         <div class="customer-reviews">
             <h4><span class="underline">Customer Reviews</span></h4>
+            <div class="detail-review">
             ${resto.customerReviews.map((customer) => `
-                    <div class="reviews">        
+                    <div class="reviews-item">        
                         <h5 class="customer-name">${customer.name}</h5>
                         <p class="date">${customer.date}</p>
                         <p>${customer.review}</p>
                     </div>
                 `).join('')}
+              </div>
         </div>
     </div>
     `;

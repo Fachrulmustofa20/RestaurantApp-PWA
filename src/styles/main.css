@@ -336,7 +336,7 @@ footer p{
 .customer-name{
     font-size: 15px;
 }
-.reviews{
+.reviews-item{
     padding: 5px 10px;
     margin: 18px 0;
     background-color: #e8e8eb;
@@ -351,7 +351,7 @@ footer p{
 /*
  * Like
  */
- .like {
+.like {
     font-size: 18px;
     position: fixed;
     bottom: 16px;
@@ -367,6 +367,9 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.like:hover{
+    background-color: #bf3020;
 }
 
 .not-connection{
@@ -389,4 +392,63 @@ footer p{
     text-align: center;
     padding-top: 150px;
     min-height: 700px;
+}
+/*
+* Form review
+*/
+.add-review{
+    margin-bottom: 10px;
+}
+.form-review{
+    padding: 5px 40px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #f5d34b;
+}
+
+input,
+textarea,
+.submit-review {
+    width: 100%;
+    border: 1px solid #18191a;
+}
+.form {
+    background: #fff;
+}
+  
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+form label {
+    display: block;
+}
+form p {
+    margin: 0;
+}
+  
+.full-width {
+    grid-column: 1 / 3;
+}
+  
+.submit-review,
+input,
+textarea {
+    padding: 1em;
+}
+  
+.submit-review {
+    background: lightgrey;
+    width: 100%;
+    border: 0;
+}
+.submit-review:hover, .submit-review:focus {
+    background: #f5d34b;
+    outline: 0;
+}
+.submit-review{
+    font-size: 15px;
 }

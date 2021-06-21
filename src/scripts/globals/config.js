@@ -1,4 +1,5 @@
 const CONFIG = {
+  KEY: '12345',
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
   SMALL_IMAGE_URL: (pictureId) => `${CONFIG.BASE_URL}images/small/${pictureId}`,
   MEDIUM_IMAGE_URL: (pictureId) => `${CONFIG.BASE_URL}images/medium/${pictureId}`,

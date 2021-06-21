@@ -75,9 +75,10 @@
     }
 }
 @media screen and (min-width: 1200px) {
-    .content, .restaurant-info{
+    .content, .restaurant-info, .form-review{
         max-width: 1200px;
         margin: auto;
+        margin-bottom: 30px;
     }
     .restaurant-image{
         width: 100%;
