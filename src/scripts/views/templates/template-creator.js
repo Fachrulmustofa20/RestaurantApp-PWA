@@ -54,14 +54,14 @@ const spinner = `
 
 const notConnection = `
   <div class="not-connection">
-      <img src="./images/no-connection.png" class="img-internet">
+      <img src="./images/no-connection.png" class="img-internet" alt="no-connection-internet">
       <h3 class="not-internet">Uppss!..Anda sedang tidak terhubung dengan internet!</h3>
   </div>
 `;
 
 const isEmpty = `
   <div class="isEmpty">
-    <img src="./images/is-empty.png" class="img-null">
+    <img src="./images/is-empty.png" class="img-null" alt="favorite-is-empty">
     <h3 class="empty">Uppss!..Anda belum memiliki restaurant favorit!</h3>
   </div>
 `;
