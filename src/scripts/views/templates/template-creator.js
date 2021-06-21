@@ -41,6 +41,22 @@ const restoDetailTemplate = (resto) => `
                 `).join('')}
               </div>
         </div>
+        <div class="form-review">
+          <h4 class="add-review"><span class="underline">Tambahkan Review</span></h4>
+            <form>
+              <div class="full-width">
+                <label for="inputName">Nama</label>
+                <input name="inputName" type="text" id="inputName" />
+              </div>
+              <div class="full-width">
+                <label for="inputReview">Reviews</label>
+                <textarea name="inputReview" id="inputReview" cols="30" rows="7"></textarea>
+              </div>
+              <div class="full-width">
+                <button id="submit-review" class="submit-review" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Kirim</button>
+              </div>
+            </form>
+        </div>
     </div>
     `;
 
@@ -57,14 +73,14 @@ const spinner = `
 const notConnection = `
   <div class="not-connection">
       <img src="./images/no-connection.png" class="img-internet" alt="no-connection-internet">
-      <h3 class="not-internet">Uppss!..Anda sedang tidak terhubung dengan internet!</h3>
+      <h3 class="not-internet">Oppss!..Anda sedang tidak terhubung dengan internet!</h3>
   </div>
 `;
 
 const isEmpty = `
   <div class="isEmpty">
     <img src="./images/is-empty.png" class="img-null" alt="favorite-is-empty">
-    <h3 class="empty">Uppss!..Anda belum memiliki restaurant favorit!</h3>
+    <h3 class="empty">Oppss!..Anda belum memiliki restaurant favorit!</h3>
   </div>
 `;
 
