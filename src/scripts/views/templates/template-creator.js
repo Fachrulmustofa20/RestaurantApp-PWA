@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 /* eslint-disable no-unused-expressions */
 const restoListTemplate = (resto) => `
     <div class="list-item">
-        <img class="list-item-thumb" src="${CONFIG.SMALL_IMAGE_URL(resto.pictureId)}" alt="${resto.name}" loading="lazy">
+        <img class="list-item-thumb lazyload" data-src="${CONFIG.SMALL_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
         <div class="list-city">
             <p class="city">Kota: ${resto.city} </p>
         </div>
@@ -16,7 +16,7 @@ const restoListTemplate = (resto) => `
     `;
 
 const restoDetailTemplate = (resto) => `
-    <img class="restaurant-image" src="${CONFIG.MEDIUM_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
+    <img class="restaurant-image lazyload" data-src="${CONFIG.MEDIUM_IMAGE_URL(resto.pictureId)}" alt="${resto.name}">
     <div class="restaurant-info">
         <h2 class="restaurant-name"><span class="underline">${resto.name}</span></h2>
         <h3 class="rating-info">Rating: ${resto.rating}</h3>
@@ -72,14 +72,14 @@ const spinner = `
 
 const notConnection = `
   <div class="not-connection">
-      <img src="./images/no-connection.png" class="img-internet" alt="no-connection-internet">
+      <img data-src="./images/no-connection.png" class="img-internet lazyload" alt="no-connection-internet">
       <h3 class="not-internet">Oppss!..Anda sedang tidak terhubung dengan internet!</h3>
   </div>
 `;
 
 const isEmpty = `
   <div class="isEmpty">
-    <img src="./images/is-empty.png" class="img-null" alt="favorite-is-empty">
+    <img data-src="./images/is-empty.png" class="img-null lazyload" alt="favorite-is-empty">
     <h3 class="empty">Oppss!..Anda belum memiliki restaurant favorit!</h3>
   </div>
 `;
