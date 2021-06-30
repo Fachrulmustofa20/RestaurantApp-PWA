@@ -72,14 +72,22 @@ const spinner = `
 
 const notConnection = `
   <div class="not-connection">
-      <img data-src="./images/no-connection.png" class="img-internet lazyload" alt="no-connection-internet">
-      <h3 class="not-internet">Oppss!..Anda sedang tidak terhubung dengan internet!</h3>
+    <picture>
+      <source type="image/webp" srcset="./images/no-connection.webp">
+      <source type="image/jpeg" srcset="./images/no-connection.png">
+      <img class="img-internet" src="./images/no-connection.png" alt="no-connection-internet">
+    </picture>
+    <h3 class="not-internet">Oppss!..Anda sedang tidak terhubung dengan internet!</h3>
   </div>
 `;
 
 const isEmpty = `
   <div class="isEmpty">
-    <img data-src="./images/is-empty.png" class="img-null lazyload" alt="favorite-is-empty">
+    <picture>
+      <source type="image/webp" srcset="./images/is-empty.webp">
+      <source type="image/jpeg" srcset="./images/is-empty.png">
+      <img class="img-null" src="./images/is-empty.png" alt="favorite-is-empty">
+    </picture>
     <h3 class="empty">Oppss!..Anda belum memiliki restaurant favorit!</h3>
   </div>
 `;
