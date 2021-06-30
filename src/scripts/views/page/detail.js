@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import RestoDBSource from '../../data/restodb-source';
 import UrlParser from '../../routes/url-parser';
-import likeButtonInitiator from '../../utils/like-button-initiator';
+import likeButtonInitiator from '../../utils/like-button';
 import PostReview from '../../utils/post-review';
 import { notConnection, restoDetailTemplate, spinner } from '../templates/template-creator';
 
@@ -22,7 +22,7 @@ const Detail = {
       restaurantContainer.innerHTML += restoDetailTemplate(restaurant);
       restaurantContainer.querySelector('.spinner').setAttribute('hidden', '');
 
-      likeButtonInitiator.Infinity({
+      likeButtonInitiator.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         restaurant: {
           id: restaurant.id,
