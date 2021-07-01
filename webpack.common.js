@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
 module.exports = {
@@ -53,7 +52,6 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
-    new MiniCssExtractPlugin(),
-    new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' }),
   ],
 };
