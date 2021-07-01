@@ -9,7 +9,8 @@ if (workbox) console.log('Yay! Workbox is loaded 🎉');
 else console.log('Boo! Workbox didn\'t load');
 
 workbox.core.setCacheNameDetails({
-  prefix: 'Bresto-PWA',
+  prefix: 'RestoPoint-PWA',
+  suffix: 'v1',
   precache: 'precache',
   runtime: 'runtime',
 });
