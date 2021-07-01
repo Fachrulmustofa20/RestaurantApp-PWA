@@ -58,6 +58,10 @@
         object-fit: cover;
         object-position: center;
     }
+    .hero{
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.878)),
+        url('../public/images/heros/hero-image_2-large.jpg');
+    }
 }
 
 @media screen and (min-width: 1000px) {

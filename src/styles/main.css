@@ -109,7 +109,7 @@ a{
 .hero{
     margin-top: -55px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.878)),
-    url('../public/images/heros/hero-image_2.jpg');
+    url('../public/images/heros/hero-image_2-small.jpg');
     background-repeat: no-repeat;
     min-height: 600px;
     display: flex;
