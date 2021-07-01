@@ -1,11 +1,14 @@
-import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+/* eslint-disable import/no-extraneous-dependencies */
+import { Workbox } from 'workbox-window';
 
-const swRegister = async () => {
+const swRegister = () => {
   if ('serviceWorker' in navigator) {
-    await runtime.register();
-    return;
+    const workbox = new Workbox('../sw.js');
+    workbox.register();
+    console.log('Registrasi service worker berhasil.');
+  } else {
+    console.log('Service worker tidak didukung browser ini.');
   }
-  console.log('Service worker not supported in this browser');
 };
 
 export default swRegister;
