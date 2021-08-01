@@ -2,7 +2,7 @@
 
 Simple Restaurant PWA apps with dummy data
 
-#### Check this website [Resto Point Lite](https://fachrul-covid19web.netlify.app/).
+#### Check this website [Resto Point Lite](https://restopoint.netlify.app/).
 
 ![landing-page](readme.jpg)
 
@@ -10,6 +10,7 @@ Simple Restaurant PWA apps with dummy data
 This website built with:
 * HTML
 * CSS
+* Vanilla js
 * Webpack
 * Workbox-webpack-plugin
 * Idb
