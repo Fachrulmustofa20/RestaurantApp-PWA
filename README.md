@@ -36,4 +36,4 @@ This website built with:
 `$ npm run e2e`
 
 ### API:
-<a href="https://github.com/mathdroid/indonesia-covid-19-api">Dicoding Restaurant</a>
+<a href="https://restaurant-api.dicoding.dev/">Dicoding Restaurant</a>
