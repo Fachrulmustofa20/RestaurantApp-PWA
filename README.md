@@ -4,14 +4,15 @@ Simple Restaurant PWA apps with dummy data
 
 #### Check this website [Resto Point Lite](https://fachrul-covid19web.netlify.app/).
 
-![landing-page](readme.png)
+![landing-page](readme.jpg)
 
 ## Description
 This website built with:
 * HTML
 * CSS
 * Webpack
-* Workbox
+* Workbox-webpack-plugin
+* Idb
 
 
 ## Run Local
@@ -28,6 +29,10 @@ This website built with:
 
 #### Production
 `$ npm run build`
+
+#### Testing
+`$ npm run test`
+`$ npm run e2e`
 
 ### API:
 <a href="https://github.com/mathdroid/indonesia-covid-19-api">Dicoding Restaurant</a>
